@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моите любими дестинации</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff; /* Светлосин фон */
+            color: #003366; /* Тъмен син текст */
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #0066cc; /* Яркосин заглавие */
+        }
+        img {
+            max-width: 80%; /* Намаляване на максималната широчина на изображението */
+            height: auto;
+            display: none; /* Скриваме изображението по подразбиране */
+            transition: transform 0.3s, box-shadow 0.3s; /* Плавно преходи за трансформация и сянка */
+        }
+        img:hover {
+            transform: scale(1.05); /* Увеличаване на изображението при задържане на мишката */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 102, 204, 0.8); /* Блясък около ръбовете */
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Светъл фон */
+            border-top: 16px solid #0066cc; /* Яркосин цвят */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite; /* Анимация на въртене */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loading-text {
+            margin-top: 10px;
+            color: #0066cc; /* Яркосин текст за зареждане */
+        }
+        table {
+            width: 80%; /* Широчина на таблицата */
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: left; /* Подравняване на текста наляво */
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        th {
+            background-color: #0066cc; /* Яркосин фон на заглавията на таблицата */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Светлосив фон за четни редове */
+        }
+
+        ol, ul {
+            width: 80%; /* Широчина на списъците */
+            padding-left: 20px; /* Отстъп отляво */
+            margin-top: 20px; /* Разстояние от предходния елемент */
+        }
+
+        li {
+            background-color: #cceeff; /* Светлосин фон за елементите на списъка */
+            border-radius: 5px; /* Закръглени ръбове */
+            padding: 10px; /* Отстъп в елементите на списъка */
+            margin-bottom: 10px; /* Разстояние между елементите на списъка */
+            transition: background-color 0.3s; /* Плавен преход за фоновия цвят при задържане */
+        }
+
+        li:hover {
+            background-color: #99ccff; /* По-тъмен светлосин фон при задържане на мишката */
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="loading-text">Зареждане на сайта...</div>
+
+    <h1 style="display:none;">Моите любими дестинации</h1>
+
+    <p style="display:none;">Пътуването е едно от най-вълнуващите преживявания в живота. Всяка дестинация предлага уникални култури, храни и забележителности.</p>
+
+    <p style="display:none;">В тази страница ще споделя някои от любимите си места за пътуване и какво да вземете със себе си при пътуване.</p>
+
+    <img src="https://media.timeout.com/images/106181719/750/562/image.webp" alt="Снимка на любима дестинация">
+
+    <h2 style="display:none;">Номериран списък с любими дестинации</h2>
+    <ol style="display:none;">
+        <li>Париж, Франция</li>
+        <li>Токио, Япония</li>
+        <li>Ню Йорк, САЩ</li>
+    </ol>
+
+    <h2 style="display:none;">Неномериран списък с неща за вземане</h2>
+    <ul style="display:none;">
+        <li>Камера</li>
+        <li>Чадър</li>
+        <li>Книги за четене</li>
+    </ul>
+
+    <h2 style="display:none;">Полезни връзки</h2>
+    <p style="display:none;">За повече информация относно пътуванията, можете да посетите <a href="https://www.travel.com" target="_blank">Travel.com</a>.</p>
+
+    <h2 style="display:none;">Таблица с информация за дестинации</h2>
+    <table style="display:none;">
+        <tr>
+            <th>Дестинация</th>
+            <th>Страна</th>
+            <th>Интересен факт</th>
+        </tr>
+        <tr>
+            <td>Париж</td>
+            <td>Франция</td>
+            <td>Ейфеловата кула е построена през 1889 г. за Световното изложение.</td>
+        </tr>
+        <tr>
+            <td>Токио</td>
+            <td>Япония</td>
+            <td>Токио е дом на повече от 13 милиона души и е един от най-гъсто населените градове в света.</td>
+        </tr>
+        <tr>
+            <td>Ню Йорк</td>
+            <td>САЩ</td>
+            <td>Статуята на свободата е подарък от Франция и е символ на свободата и демокрацията.</td>
+        </tr>
+        <tr>
+            <td>Рим</td>
+            <td>Италия</td>
+            <td>Колизеумът в Рим е най-голямият древен амфитеатър и може да побере до 80,000 зрители.</td>
+        </tr>
+        <tr>
+            <td>Сидни</td>
+            <td>Австралия</td>
+            <td>Сидни Опера е известна със своя уникален дизайн, вдъхновен от морски черупки.</td>
+        </tr>
+    </table>
+
+    <script>
+        // Функция за показване на съдържанието след 3 секунди
+        setTimeout(function() {
+            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.loading-text').style.display = 'none';
+
+            // Показваме съдържанието
+            document.querySelector('h1').style.display = 'block';
+            document.querySelectorAll('p').forEach(p => p.style.display = 'block');
+            document.querySelector('img').style.display = 'block';
+            document.querySelectorAll('h2').forEach(h => h.style.display = 'block');
+
+           // Показваме списъците и таблицата
+           document.querySelectorAll('ol, ul, table').forEach(list => list.style.display = 'block');
+
+           // Показваме заглавията на списъците
+           document.querySelectorAll('h2').forEach(h => h.style.display = 'block');
+
+           // Показваме списъците
+           document.querySelectorAll('ol').forEach(ol => ol.style.display = 'block');
+           document.querySelectorAll('ul').forEach(ul => ul.style.display = 'block');
+
+           // Показваме таблицата
+           document.querySelector('table').style.display = 'block';
+
+       }, 3000); // Времето в милисекунди (3000ms = 3 секунди)
+   </script>
+
+</body>
+</html>
